@@ -43,9 +43,10 @@ def tokenize_line(line, nodes, combined=False):
         return [node_token(x) for x in data.split()]
 
     def tokenize_reset_data(data):
-        """no data for reset line, do nothing
+        """input: string of space separated node ids (may be empty)
+        output: list of node label tokens
         """
-        return []
+        return [node_token(x) for x in data.split()]
 
     line_type_str, data = line.split(':')
     
