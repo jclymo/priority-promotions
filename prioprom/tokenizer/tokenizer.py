@@ -40,7 +40,7 @@ def tokenize(graph_trace_description_string, combined=False):
 
     optimal_trace_tokens = []
     if start_optimal_pos != -1:
-        optimal_algorithm_trace = optimal_algorithm_trace.split('\n')
+        optimal_algorithm_trace = optimal_algorithm_trace.strip('\n').split('\n')
         for line in optimal_algorithm_trace:
             optimal_trace_tokens.extend(tokenize_line(line, nodes, combined))
 
